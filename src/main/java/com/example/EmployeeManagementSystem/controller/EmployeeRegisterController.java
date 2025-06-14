@@ -48,7 +48,6 @@ public class EmployeeRegisterController {
             EmployeeRegister updated = service.updateEmployee(id, updatedEmployee);
             return ResponseEntity.ok(updated);
         } catch (RuntimeException ex) {
-            // Log the exception for debugging on the server side
             System.err.println("Error updating employee: " + ex.getMessage());
             return ResponseEntity.notFound().build();
         }
